@@ -12,6 +12,7 @@
   --filter-btn-color: #f5f4fa;
   --hr-border-color: #ececec;
   --card-border-color: #eeeeee;
+  --link-icons-color: #afb1b8;
   --logo-font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
   --main-font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
 }
@@ -75,7 +76,8 @@ ul {
 }
 
 img,
-a {
+a,
+b {
   display: block;
 }
 
@@ -267,6 +269,15 @@ a {
   background-color: var(--bg-color);
 }
 
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.contacts-column {
+  margin-right: 70px;
+}
+
 .page-footer-contacts {
   margin-top: 20px;
   font-style: normal;
@@ -287,7 +298,40 @@ a {
   color: var(--footer-contacts-color);
 }
 
+.social-list-title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--alternate-logo-color);
+}
+
 /* ------------------------- END FOOTER ------------------------- */
+
+/* ------------------------- SOCIAL ICONS ------------------------- */
+
+.social-list {
+  display: flex;
+}
+
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.personal-social-list {
+  justify-content: center;
+}
+
+.social-list-link {
+  width: 44px;
+  height: 44px;
+  background-color: var(--alternate-logo-color);
+  border-radius: 50%;
+}
+
+/* ------------------------- END SOCIAL ICONS ------------------------- */
 
 /* ------------------------- END COMPONENTS ------------------------- */
 
@@ -321,6 +365,22 @@ a {
 .benefits-section {
   padding-top: 94px;
   padding-bottom: 47px;
+}
+
+.benefits-icon-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--filter-btn-color);
+}
+
+.benefits-icon {
+  width: 70px;
+  height: 70px;
 }
 
 .benefits-list-item-title {
@@ -403,8 +463,8 @@ a {
 .team-card {
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .team-list-item-name {
@@ -417,12 +477,40 @@ a {
 }
 
 .team-list-item-work-position {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
 
 /* ------------------------- END TEAM ------------------------- */
+
+/* ------------------------- CLIENTS ------------------------- */
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.clients-list-item {
+  flex-basis: calc((100% - 180px) / 6);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.clients-list-link {
+  width: 170px;
+  height: 92px;
+  border-color: var(--link-icons-color);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+/* ------------------------- END CLIENTS ------------------------- */
 
 /* ------------------------- PORTFOLIO ------------------------- */
 
