@@ -13,6 +13,7 @@
   --hr-border-color: #ececec;
   --card-border-color: #eeeeee;
   --link-icons-color: #afb1b8;
+  --dark-theme-icon-bgc: rgba(255, 255, 255, 0.1);
   --logo-font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
   --main-font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
 }
@@ -250,6 +251,42 @@ b {
   color: var(--titles-text-color);
 }
 
+/* .nav-list-link:hover,
+.nav-list-link:focus,
+.page-header-contacts-item:hover,
+.page-header-contacts-item:focus,
+.page-footer-contacts-list-link:hover,
+.page-footer-contacts-list-link:focus {
+  color: var(--accent-logo-color);
+}
+
+.page-header-contacts-item {
+  display: flex;
+  align-items: center;
+}
+
+.page-header-contacts-item:hover .smartphone-icon,
+.page-header-contacts-item:focus .smartphone-icon {
+  fill: var(--accent-logo-color);
+  color: var(--accent-logo-color);
+}
+
+.contacts-icon {
+  margin-right: 10px;
+  display: block;
+  fill: currentColor;
+}
+
+.smartphone-icon {
+  width: 10px;
+  height: 16px;
+}
+
+.envelope-icon {
+  width: 16px;
+  height: 12px;
+} */
+
 .nav-list-link:hover,
 .nav-list-link:focus,
 .page-header-contacts-link:hover,
@@ -257,6 +294,27 @@ b {
 .page-footer-contacts-list-link:hover,
 .page-footer-contacts-list-link:focus {
   color: var(--accent-logo-color);
+}
+
+.page-header-contacts-link {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-icon {
+  margin-right: 10px;
+  display: block;
+  fill: currentColor;
+}
+
+.smartphone-icon {
+  width: 10px;
+  height: 16px;
+}
+
+.envelope-icon {
+  width: 16px;
+  height: 12px;
 }
 
 /* ------------------------- END HEADER ------------------------- */
@@ -314,6 +372,12 @@ b {
 
 .social-list {
   display: flex;
+  justify-content: center;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .social-list-item:not(:last-child) {
@@ -325,10 +389,43 @@ b {
 }
 
 .social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
-  background-color: var(--alternate-logo-color);
   border-radius: 50%;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.light-theme-icon-bgc {
+  background-color: var(--alternate-logo-color);
+}
+
+.light-theme-icon {
+  fill: var(--link-icons-color);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-logo-color);
+}
+
+.light-theme-icon-bgc:hover .social-icon,
+.light-theme-icon-bgc:focus .social-icon {
+  fill: var(--alternate-logo-color);
+}
+
+.dark-theme-icon-bgc {
+  background-color: var(--dark-theme-icon-bgc);
+}
+
+.dark-theme-icon {
+  fill: var(--alternate-logo-color);
 }
 
 /* ------------------------- END SOCIAL ICONS ------------------------- */
@@ -338,7 +435,16 @@ b {
 /* ------------------------- HERO ------------------------- */
 
 .hero-section {
+  width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
   background-color: var(--bg-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/hero-bg.jpg);
+  background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -367,18 +473,19 @@ b {
   padding-bottom: 47px;
 }
 
-.benefits-icon-bg {
+.benefits-icon-bgc {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
-  height: 120px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-bottom: 30px;
   border-radius: 4px;
   background-color: var(--filter-btn-color);
 }
 
 .benefits-icon {
+  display: block;
   width: 70px;
   height: 70px;
 }
@@ -496,18 +603,39 @@ b {
 }
 
 .clients-list-item {
+  display: flex;
+  justify-content: center;
   flex-basis: calc((100% - 180px) / 6);
+  height: 92px;
   margin-left: 30px;
   margin-top: 30px;
 }
 
+.client-icon {
+  width: 106px;
+  height: 60px;
+}
+
 .clients-list-link {
-  width: 170px;
-  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   border-color: var(--link-icons-color);
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+  border-color: var(--accent-logo-color);
+}
+
+.clients-list-link:hover .client-icon,
+.clients-list-link:focus .client-icon {
+  fill: var(--accent-logo-color);
 }
 
 /* ------------------------- END CLIENTS ------------------------- */
