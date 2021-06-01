@@ -224,11 +224,13 @@ b {
 
 .nav-list {
   display: flex;
+  align-items: center;
 }
 
 .page-header-contacts-list {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 
 .logo {
