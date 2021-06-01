@@ -111,7 +111,7 @@ b {
   color: var(--accent-color);
 }
 
-.alternate-logo-color {
+.logo.alternate-logo-color {
   color: var(--alternate-logo-color);
 }
 
