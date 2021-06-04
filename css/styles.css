@@ -165,14 +165,10 @@ b {
   border-radius: 4px;
 }
 
-.active-filter {
-  background-color: var(--accent-color);
-  color: var(--alternate-logo-color);
-}
-
-.active-filter,
 .filter-list-btn:hover,
 .filter-list-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--alternate-logo-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -404,19 +400,17 @@ b {
 /* ------------------------- HERO ------------------------- */
 
 .hero-section {
-  background-color: var(--bg-color);
-}
-
-.hero-background {
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
+  background-color: var(--bg-color);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero/hero-bg.jpg);
   background-size: cover;
+  background-position: center;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -472,8 +466,7 @@ b {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
   background-color: var(--filter-btn-color);
@@ -611,6 +604,34 @@ b {
   fill: var(--accent-color);
 }
 
+/* Другой вариант применить бордер и фил*/
+
+/* .clients-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+ 
+  color: green;
+  border-color: inherit;
+}
+
+.client-icon {
+  display: block;
+  fill: currentColor;
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+  color: red;
+} */
+
+/* //////////////////// */
+
 /* ------------------------- END CLIENTS ------------------------- */
 
 /* ------------------------- PORTFOLIO ------------------------- */
@@ -644,7 +665,7 @@ b {
   margin-top: 30px;
 }
 
-.projects-list-item:hover {
+.projects-list-item-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
